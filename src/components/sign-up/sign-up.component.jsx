@@ -9,7 +9,7 @@ import {
 
 import Button from "../button/button.component";
 
-import './sign-up.styles.scss'
+import "./sign-up.styles.scss";
 
 const defaultFormFields = {
 	displayName: "",
@@ -25,7 +25,7 @@ const SignUpForm = () => {
 	const resetFormFields = () => {
 		setFormFields(defaultFormFields);
 	};
-	
+
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		if (password !== confirmPassword) {
@@ -37,7 +37,6 @@ const SignUpForm = () => {
 				email,
 				password
 			);
-
 			await createUserDocumentFromAuth(user, { displayName });
 			resetFormFields();
 		} catch (error) {
@@ -56,7 +55,7 @@ const SignUpForm = () => {
 
 	return (
 		<div className="sign-up-container">
-            <h2>Don't have an account?</h2>
+			<h2>Don't have an account?</h2>
 			<span>Sign up with your email and password</span>
 			<form onSubmit={handleSubmit} action="">
 				<FormInput
