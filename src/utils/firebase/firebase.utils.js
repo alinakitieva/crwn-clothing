@@ -12,7 +12,7 @@ import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
 import { firebaseConfig } from "./firebase-config";
 
-const firebaseApp = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({
